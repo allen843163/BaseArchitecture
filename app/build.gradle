@@ -67,6 +67,7 @@ dependencies {
     def koin_version = "2.1.5"
     def kotlin_coroutines_version = "1.3.5"
     def kotlin_serialization_version = "0.20.0"
+    def picasso_version = "2.71828"
 //    def mockk_version = "1.9.3"
 //    def mock_webserver_version = "4.6.0"
 //    def robolectric_version = "4.3.1"
@@ -146,6 +147,9 @@ dependencies {
 
     //Kotlin序列化套件
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$kotlin_serialization_version"
+
+    //Picasso (圖片加載套件)
+    implementation "com.squareup.picasso:picasso:$picasso_version"
 
 //    //Mockk (測試模擬用套件)
 //    testImplementation "io.mockk:mockk:$mockk_version"
