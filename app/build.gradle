@@ -42,8 +42,11 @@ android {
         freeCompilerArgs = ["-Xallow-result-return-type"]
     }
     testOptions{
-        unitTests{
-            includeAndroidResources = true
+        unitTests.returnDefaultValues = true
+        testOptions {
+            unitTests {
+                includeAndroidResources = true
+            }
         }
     }
     dataBinding {
@@ -77,9 +80,9 @@ dependencies {
     def kotlin_serialization_version = "0.20.0"
     def picasso_version = "2.71828"
     def rxbinding_version = "3.1.0"
-//    def mockk_version = "1.9.3"
+    def mockk_version = "1.9.3"
 //    def mock_webserver_version = "4.6.0"
-//    def robolectric_version = "4.3.1"
+    def robolectric_version = "4.3.1"
 //    def androidx_test_core = "1.2.0"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -139,7 +142,7 @@ dependencies {
     //Collection (Kotlin對Collection類別的擴充方法套件)
     implementation "androidx.collection:collection-ktx:$collection_version"
 
-    //Kotin Ktor (Kotlin官方網路請求套件)
+    //Kotlin Ktor (Kotlin官方網路請求套件)
     implementation "io.ktor:ktor-client-core:$ktor_version"
     implementation "io.ktor:ktor-client-android:$ktor_version"
     implementation "io.ktor:ktor-client-okhttp:$ktor_version"
@@ -173,12 +176,12 @@ dependencies {
     implementation "com.jakewharton.rxbinding3:rxbinding-viewpager2:$rxbinding_version"
     implementation "com.jakewharton.rxbinding3:rxbinding-material:$rxbinding_version"
 
-//    //Mockk (測試模擬用套件)
-//    testImplementation "io.mockk:mockk:$mockk_version"
-//    androidTestImplementation "io.mockk:mockk:$mockk_version"
+    //Mockk (測試模擬用套件)
+    testImplementation "io.mockk:mockk:$mockk_version"
+    androidTestImplementation "io.mockk:mockk:$mockk_version"
 //
-//    //Robolectric (測試模擬用套件)
-//    testImplementation "org.robolectric:robolectric:$robolectric_version"
+    //Robolectric (測試模擬用套件)
+    testImplementation "org.robolectric:robolectric:$robolectric_version"
 //    testImplementation "androidx.test:core:$androidx_test_core"
 //
 //    //MockWebServer (測試模擬用套件)
