@@ -149,6 +149,9 @@ dependencies {
     implementation "io.ktor:ktor-client-serialization-jvm:$ktor_version"
 
     //Koin (DI依賴注入套件) - for AndroidX
+    implementation "org.koin:koin-core:$koin_version"
+    implementation "org.koin:koin-core-ext:$koin_version"
+    implementation "org.koin:koin-android:$koin_version"
     implementation "org.koin:koin-androidx-scope:$koin_version"
     implementation "org.koin:koin-androidx-viewmodel:$koin_version"
     implementation "org.koin:koin-androidx-fragment:$koin_version"
