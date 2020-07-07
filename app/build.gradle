@@ -60,6 +60,14 @@ android {
     packagingOptions {
         exclude 'META-INF/*.kotlin_module'
     }
+
+    /**
+     * Fix Issue :
+     * https://stackoverflow.com/questions/52631827/why-cant-kotlin-result-be-used-as-a-return-type
+     */
+    kotlinOptions {
+        freeCompilerArgs = ["-Xallow-result-return-type"]
+    }
 }
 
 dependencies {
