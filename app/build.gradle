@@ -92,6 +92,9 @@ dependencies {
 //    def mock_webserver_version = "4.6.0"
     def robolectric_version = "4.3.1"
 //    def androidx_test_core = "1.2.0"
+    def acra_version = '5.6.1'
+    def slf4j_api_version = '1.7.30'
+    def logback_version = '2.0.0'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -159,7 +162,7 @@ dependencies {
     //Koin (DI依賴注入套件) - for AndroidX
     implementation "org.koin:koin-core:$koin_version"
     implementation "org.koin:koin-core-ext:$koin_version"
-    implementation "org.koin:koin-android:$koin_version"
+//    implementation "org.koin:koin-android:$koin_version"
     implementation "org.koin:koin-androidx-scope:$koin_version"
     implementation "org.koin:koin-androidx-viewmodel:$koin_version"
     implementation "org.koin:koin-androidx-fragment:$koin_version"
@@ -199,4 +202,12 @@ dependencies {
 //    implementation "com.squareup.okhttp3:mockwebserver:$mock_webserver_version"
 //    testImplementation "com.squareup.okhttp3:mockwebserver:$mock_webserver_version"
 
+    //ACRA (Catch App Crash套件)
+    implementation "ch.acra:acra-core:$acra_version"
+    implementation "ch.acra:acra-http:$acra_version"
+
+    //Logger框架
+    implementation "org.slf4j:slf4j-api:$slf4j_api_version"
+    //Logback (Android-Log to File套件)
+    implementation "com.github.tony19:logback-android:$logback_version"
 }
